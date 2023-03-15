@@ -1,0 +1,31 @@
+hello everyone
+***it works with Abaqus and Matlab ******** 
+this is the v0 realese of the GWSG2ML
+*********************************************
+Guide Wave Generator too Machine Learnig 
+*********************************************
+how this script works
+-it create a model with randomic position of defects
+-excitated a guided wave in this model 
+-acquire signal for pós proces 
+v0 realese
+model: strip 2D (shell)
+defects: circular holes 
+signal acquire: one point close to the end of the strip
+********************************************
+instructions to use:
+- the interface is in the main.m 
+
+the user can set:
+excitation direction and amplitud
+tone burst frequency and number of cycle 
+acquires frequency 
+size and numbers of defects
+
+------------------------------------
+any coments please contact 
+groth.mecanica@gmail.com
+
+
+
+
