@@ -1,5 +1,6 @@
 %% GWSG2ML - assistant rotine
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+j=0;
 for k=1:size(number_defect,2)
 for l=1:2
 fid = fopen('folder.txt','wt');
@@ -27,7 +28,7 @@ dos(pathl);
 rr=ans;
 end
 
-    %% storage of the signals 
+%% storage of the signals 
 cd(folder_results)
 u0= importdata('u0.txt'); 
 figure 
@@ -35,11 +36,18 @@ hold on
 plot(u0.data(:,1),u0.data(:,2))
 plot(u0.data(:,1),u0.data(:,3))
 
+j=j+1;
+
+cd('C:\Users\Groth\Desktop\models_ml\Golden eggs chicken\plane_strip\pos process')
+signals(j).u=u0.data;
+output(j)=outputs(k);
 %% clear the folder results
 dinfo = dir(folder_results);
 dinfo([dinfo.isdir]) = [];  
 filenames = fullfile(folder_results, {dinfo.name});
 delete( filenames{:} )
+save('signals')
+save('output')
 cd(folder_files)
 delete('folder.txt','abaqus.rpy','abaqus_acis.log','parameters.csv','tb.csv')
 end

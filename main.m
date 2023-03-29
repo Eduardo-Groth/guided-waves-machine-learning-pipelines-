@@ -10,8 +10,8 @@ time_interval_field=0.5e-4;     % acquire step of defauld field data storage (us
 pm_u1=1e-6;                     % initial excitation motion amplitud in x direction
 pm_u2=0;                        % initial excitation motion apmlitud in y direction 
 size_defect=0.5e-3;             % defect size (radius)
-number_defect=[5,30,50];               % number of defects in the model
-
+number_defect=[5,30,50];        % number of defects in the model
+outputs = [1,2,3];              % structural integrity index (SII)
 frequency=100e3;                % tone burst frequency
 number_cycles=5;                % number of cycles 
 
